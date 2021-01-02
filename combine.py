@@ -1,15 +1,13 @@
 import os
-# import sys
 import numpy as np
-# import matplotlib.pyplot as plt
 from glob import glob
 import cv2
 
 year = "2016"
 output_file_num = 62
-
-os.chdir(f"/Users/greg/Pictures/FastFoto/{year}_Xmas")
-set = []
+tilde_dir = f"~/Pictures/FastFoto/{year}_Xmas"
+exp_dir = os.path.expanduser(tilde_dir)
+os.chdir(exp_dir)
 
 
 def combine_imgs(img_files):
